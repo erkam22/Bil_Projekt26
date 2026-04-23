@@ -15,7 +15,7 @@
     <groupId>com.example</groupId>
     <artifactId>bil-projekt</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Bil_Projekt</name>
+    <name>bil-projekt</name>
 
     <properties>
         <java.version>17</java.version>
@@ -23,13 +23,13 @@
 
     <dependencies>
 
-        <!-- Web -->
+        <!-- Spring Web (REST + MVC) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- Thymeleaf -->
+        <!-- Thymeleaf (HTML templates) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -41,14 +41,14 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
-        <!-- MySQL -->
+        <!-- MySQL (production DB) -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- H2 (test/dev) -->
+        <!-- H2 (test/dev DB) -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -70,25 +70,18 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- FIX: stabil logging til Azure -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-
     </dependencies>
 
     <build>
         <plugins>
 
-            <!-- Spring Boot build -->
+            <!-- Spring Boot plugin (creates runnable jar) -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!-- Java 17 compiler -->
+            <!-- Java compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
